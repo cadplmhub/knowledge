@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CAD PLM HUB Dashboard</title>
+  
   <!-- ✅ Google AdSense Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9516229093670674"
     crossorigin="anonymous"></script>
-  <!-- ✅ Add this favicon line -->
+  
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="CADPLMHUB_LOGO.png" />
 
   <style>
@@ -18,46 +20,25 @@
       background: url('background-cad.jpg') center/cover no-repeat fixed;
     }
 
+    /* Add dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+    }
+
     header {
-      background: rgba(26,35,126,0.8);
+      background: rgba(26,35,126,0.9);
       padding: 30px;
       text-align: center;
-      font-size: 34px;
+      font-size: clamp(24px, 4vw, 36px);
       font-weight: bold;
     }
 
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      padding: 30px 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      display: block;
-    }
-
     section.plm {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.7);
       margin: 40px auto;
       padding: 40px;
       max-width: 900px;
@@ -69,13 +50,61 @@
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      padding: 30px 15px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(26,35,126,0.8);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .card a:hover {
+      color: #ffeb3b;
     }
 
     footer {
-      background: rgba(26,35,126,0.8);
+      background: rgba(26,35,126,0.9);
       color: #fff;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -99,7 +128,13 @@
   <div class="card"><a href="contact.html">Contact Us</a></div>
 </main>
 
-<footer>&copy; 2025 CAD PLM HUB. All rights reserved.</footer>
+<footer>
+  <p>&copy; 2025 CAD PLM HUB. All rights reserved.</p>
+  <p>
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms of Use</a>
+  </p>
+</footer>
 
 </body>
 </html>
