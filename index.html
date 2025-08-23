@@ -19,8 +19,6 @@
       color: #fff;
       background: url('background-cad.jpg') center/cover no-repeat fixed;
     }
-
-    /* Add dark overlay for readability */
     body::before {
       content: "";
       position: fixed;
@@ -28,7 +26,6 @@
       background: rgba(0,0,0,0.4);
       z-index: -1;
     }
-
     header {
       background: rgba(26,35,126,0.9);
       padding: 30px;
@@ -36,7 +33,6 @@
       font-size: clamp(24px, 4vw, 36px);
       font-weight: bold;
     }
-
     section.plm {
       background: rgba(0,0,0,0.7);
       margin: 40px auto;
@@ -45,54 +41,40 @@
       border-radius: 12px;
       text-align: center;
     }
-
     section.plm img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
       margin-top: 20px;
     }
-
-    main {
+    .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      padding: 40px;
-      max-width: 1100px;
-      margin: auto;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 20px;
     }
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 20px;
-}
-
-.card {
-  background: rgba(26, 35, 126, 0.85); /* dark blue background */
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-  padding: 30px 15px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background: rgba(63,81,181,0.95); /* lighter hover effect */
-}
-
-.card a {
-  text-decoration: none;
-  color: #fff;  /* text will be white */
-  font-size: 18px;
-  font-weight: 600;
-  display: block;
-}
+    .card {
+      background: rgba(26, 35, 126, 0.85);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      padding: 30px 15px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(63,81,181,0.95);
+    }
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+    }
     footer {
       background: rgba(26,35,126,0.9);
       color: #fff;
@@ -100,27 +82,22 @@
       padding: 20px;
       margin-top: 40px;
     }
-
     footer a {
       color: #ffeb3b;
       text-decoration: none;
       margin: 0 8px;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
 <header>CAD PLM HUB Dashboard</header>
-
 <section class="plm">
   <h2>Product Lifecycle Management Workflow</h2>
   <img src="plm-workflow.png" alt="PLM Workflow Diagram" width="600">
 </section>
-
 <div class="cards">
   <div class="card"><a href="about.html">About Us</a></div>
   <div class="card"><a href="services.html">Services</a></div>
@@ -131,14 +108,13 @@
   <div class="card"><a href="blog.html">Blog</a></div>
   <div class="card"><a href="contact.html">Contact Us</a></div>
 </div>
-
 <footer>
   <p>&copy; 2025 CAD PLM HUB. All rights reserved.</p>
   <p>
     <a href="privacy.html">Privacy Policy</a> | 
-    <a href="terms.html">Terms of Use</a>
+    <a href="terms.html">Terms & Conditions</a> | 
+    <a href="disclaimer.html">Disclaimer</a>
   </p>
 </footer>
-
 </body>
 </html>
